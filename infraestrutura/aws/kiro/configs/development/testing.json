@@ -1,0 +1,65 @@
+{
+  "enabled": true,
+  "test_types": [
+    "unit",
+    "integration",
+    "functional",
+    "performance",
+    "security",
+    "end_to_end"
+  ],
+  "frameworks": [
+    "pytest",
+    "jest",
+    "mocha",
+    "junit",
+    "testng"
+  ],
+  "coverage": {
+    "minimum": 80,
+    "target": 95,
+    "report_formats": ["html", "xml", "json"],
+    "enforce": true
+  },
+  "test_generation": {
+    "enabled": true,
+    "strategies": [
+      "boundary_value",
+      "equivalence_partitioning",
+      "error_guessing",
+      "state_transition",
+      "decision_table"
+    ],
+    "quality": "high",
+    "quantity": "comprehensive",
+    "include_edge_cases": true,
+    "include_invalid_inputs": true
+  },
+  "mocking": {
+    "enabled": true,
+    "libraries": [
+      "unittest.mock",
+      "pytest-mock",
+      "sinon",
+      "mockito"
+    ],
+    "auto_mock": true
+  },
+  "test_data_generation": {
+    "enabled": true,
+    "strategies": [
+      "random",
+      "edge_cases",
+      "realistic",
+      "synthetic"
+    ],
+    "formats": ["json", "csv", "yaml"],
+    "quantity": "sufficient"
+  },
+  "test_execution": {
+    "parallel": true,
+    "retry_on_failure": true,
+    "max_retries": 3,
+    "timeout": 300
+  }
+}

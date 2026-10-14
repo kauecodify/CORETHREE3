@@ -1,0 +1,77 @@
+{
+  "enabled": true,
+  "types": [
+    "api_reference",
+    "user_guide",
+    "technical_specification",
+    "architecture_diagram",
+    "tutorial",
+    "faq",
+    "release_notes",
+    "changelog"
+  ],
+  "formats": [
+    "markdown",
+    "html",
+    "pdf",
+    "asciidoc"
+  ],
+  "api_documentation": {
+    "openapi": true,
+    "swagger": true,
+    "postman": true,
+    "include": [
+      "endpoints",
+      "parameters",
+      "responses",
+      "examples",
+      "error_codes",
+      "authentication"
+    ],
+    "auto_update": true
+  },
+  "code_documentation": {
+    "enabled": true,
+    "style": "google",
+    "include": [
+      "functions",
+      "classes",
+      "modules",
+      "variables",
+      "type_definitions",
+      "parameters",
+      "return_values"
+    ],
+    "auto_update": true,
+    "check_completeness": true
+  },
+  "architecture_diagrams": {
+    "enabled": true,
+    "tools": ["mermaid", "plantuml", "graphviz"],
+    "types": [
+      "component",
+      "deployment",
+      "sequence",
+      "state",
+      "class",
+      "data_flow",
+      "infrastructure"
+    ],
+    "auto_generate": true,
+    "update_on_change": true
+  },
+  "translation": {
+    "enabled": true,
+    "languages": ["pt-BR", "en-US", "es-ES"],
+    "quality": "professional",
+    "auto_translate": true,
+    "glossary": "docs/glossary.json"
+  },
+  "quality_checks": {
+    "spelling": true,
+    "grammar": true,
+    "readability": true,
+    "consistency": true,
+    "completeness": true
+  }
+}
