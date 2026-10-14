@@ -1,0 +1,67 @@
+{
+  "agent_name": "CORETHREE3_Agent",
+  "version": "1.0.0",
+  "description": "Agente de IA para desenvolvimento e operacoes do CORETHREE3",
+  "aws_region": "us-east-1",
+  "capabilities": [
+    "code_generation",
+    "code_explanation",
+    "code_optimization",
+    "test_generation",
+    "documentation_generation",
+    "log_analysis",
+    "anomaly_detection",
+    "performance_optimization",
+    "api_validation",
+    "integration_testing",
+    "security_analysis"
+  ],
+  "models": {
+    "primary": "anthropic.claude-3-sonnet-20240229-v1:0",
+    "fallback": "anthropic.claude-3-haiku-20240307-v1:0",
+    "specialized": {
+      "code": "codellama",
+      "testing": "llama-3-70b",
+      "documentation": "mistral-large"
+    }
+  },
+  "permissions": {
+    "s3": ["corethree3-*"],
+    "lambda": ["arn:aws:lambda:*:*:function:corethree3-*"],
+    "dynamodb": ["arn:aws:dynamodb:*:*:table:corethree3-*"],
+    "cloudwatch": ["*"],
+    "xray": ["*"],
+    "iot": ["*"],
+    "sagemaker": ["*"]
+  },
+  "rate_limits": {
+    "requests_per_minute": 100,
+    "tokens_per_minute": 100000,
+    "concurrent_requests": 10
+  },
+  "logging": {
+    "enabled": true,
+    "level": "INFO",
+    "format": "json",
+    "destination": "cloudwatch"
+  },
+  "monitoring": {
+    "enabled": true,
+    "metrics": [
+      "request_count",
+      "token_usage",
+      "response_time",
+      "error_rate"
+    ],
+    "alerts": {
+      "high_error_rate": {
+        "threshold": 5,
+        "severity": "high"
+      },
+      "high_latency": {
+        "threshold": 1000,
+        "severity": "medium"
+      }
+    }
+  }
+}

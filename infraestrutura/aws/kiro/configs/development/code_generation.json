@@ -1,0 +1,59 @@
+{
+  "enabled": true,
+  "languages": [
+    "python",
+    "javascript",
+    "typescript",
+    "java",
+    "go",
+    "rust",
+    "sql"
+  ],
+  "frameworks": [
+    "aws_lambda",
+    "aws_cdk",
+    "terraform",
+    "serverless",
+    "fastapi",
+    "flask",
+    "django",
+    "express",
+    "nestjs"
+  ],
+  "code_style": {
+    "python": "pep8",
+    "javascript": "airbnb",
+    "typescript": "airbnb"
+  },
+  "best_practices": {
+    "security": true,
+    "performance": true,
+    "scalability": true,
+    "maintainability": true,
+    "documentation": true
+  },
+  "templates": {
+    "lambda_function": "templates/lambda_function.py",
+    "api_endpoint": "templates/api_endpoint.py",
+    "database_model": "templates/database_model.py",
+    "terraform_module": "templates/terraform_module.tf",
+    "kiro_integration": "templates/kiro_integration.py"
+  },
+  "validation": {
+    "syntax_check": true,
+    "type_check": true,
+    "linting": true,
+    "security_scan": true,
+    "unit_test_generation": true
+  },
+  "customization": {
+    "allow_modifications": true,
+    "suggestions": [
+      "add_error_handling",
+      "add_logging",
+      "add_metrics",
+      "add_documentation",
+      "add_type_hints"
+    ]
+  }
+}
